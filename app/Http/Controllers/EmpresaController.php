@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+
+use DB;
 
 class EmpresaController extends Controller
 {
@@ -104,6 +107,7 @@ class EmpresaController extends Controller
     {
         $empresa = \App\Empresa::find($id);
         $empresa->delete();
+        
         return redirect('empresa')->with('success','Empresa deletada');
     }
     

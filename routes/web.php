@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EmpresaController@index');
 
 Route::resource('empresa','EmpresaController');
 

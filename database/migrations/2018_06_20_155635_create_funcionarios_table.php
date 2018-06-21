@@ -20,7 +20,7 @@ class CreateFuncionariosTable extends Migration
             $table->string('phone');
             $table->string('address');
             $table->integer('empresa_id')->unsigned();
-            $table->foreign('empresa_id')->references('id')->on('empresas');
+            $table->foreign('empresa_id')->references('id')->on('empresas')->onDelete('cascade');;
             $table->decimal('salario');
 
 
